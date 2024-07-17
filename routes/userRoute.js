@@ -14,7 +14,6 @@ const path = require("path");
 
 user_route.use(express.static('public'));
 
-
 const storage = multer.diskStorage({
 
     destination: function (req, file, cb) {

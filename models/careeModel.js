@@ -1,22 +1,7 @@
 const mongoose = require("mongoose");
 
 const user = mongoose.Schema({
-  name: {
-    type: String,
-    require: true,
-  },
-
-  mobile: {
-    type: String,
-    require: true,
-  },
-
-  address: {
-    type: String,
-    require: true,
-  },
-
-  district: {
+  firstName: {
     type: String,
     require: true,
   },
@@ -26,17 +11,31 @@ const user = mongoose.Schema({
     require: true,
   },
 
-  password: {
+  country: {
+    type: String,
+  },
+
+  phoneNumber: {
     type: String,
     require: true,
   },
 
-  userrollid: {
+  applied: {
     type: String,
-    enum: ["admin"],
-    trim: true,
+    require: true,
   },
+
+  selectType: {
+    type: String,
+    require: true,
+  },
+  desc: {
+    type: String,
+    require: true,
+  },
+  
+  
 });
 
-module.exports = mongoose.model("careerPageData", user);
+module.exports = mongoose.model("careerData", user);
 // console.log(user);
